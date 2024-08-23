@@ -13,6 +13,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - name: Make scipt executable
+        run: chmod +x ./scripts/replace.sh
       - name: Inject md to html
         run: ./scripts/replace.sh
       - uses: w3c/spec-prod@v2
