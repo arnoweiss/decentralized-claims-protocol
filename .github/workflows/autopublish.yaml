@@ -13,18 +13,17 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          - node-version: 22.x
       - name: Inject md to html
         run: |
           chmod +x ./scripts/replace.sh
           ./scripts/replace.sh
       - name: Run Respec
         run: |
-          sudo apt update && sudo apt upgrade
-          sudo apt install nodejs
-          node --version
-          sudo apt install npm
           sudo npx puppeteer browsers install chrome
-          sudo npx respec --src index.html --out index.html.build.html -t 60
+          npx respec --src index.html --out index.html.build.html -t 60
 #      - uses: w3c/spec-prod@v2
 #        with:
 #          BUILD_FLAGS:
