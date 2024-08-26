@@ -13,4 +13,3 @@ index="${index/$baseph/"$base"}"
 index="${index/$presph/"$pres"}"
 index="${index/$issph/"$iss"}"
 echo "$index" > index.html
-echo ${index}
