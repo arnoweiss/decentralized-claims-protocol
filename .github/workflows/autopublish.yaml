@@ -25,7 +25,8 @@ jobs:
 #          sudo npx respec --src index.html --out index.html.build.html
       - uses: w3c/spec-prod@v2
         with:
-          BUILD_FLAGS: -t 40
+          BUILD_FLAGS:
+            - "-t 40"
 
       - uses: actions/upload-pages-artifact@v3
         with:
