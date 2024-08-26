@@ -8,16 +8,24 @@ on:
 jobs:
   build:
     name: Build and Validate
-    runs-on: ubuntu-22.04
+    runs-on: node:22
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Make scipt executable
-        run: chmod +x ./scripts/replace.sh
       - name: Inject md to html
-        run: ./scripts/replace.sh
+        run: |
+          chmod +x ./scripts/replace.sh
+          ./scripts/replace.sh
+#      - name: Run Respec
+#        run: |
+#          sudo npx puppeteer browsers install chrome
+#          sudo npm install respec
+#          re
       - uses: w3c/spec-prod@v2
+        with:
+          BUILD_FLAGS: -t 40
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
