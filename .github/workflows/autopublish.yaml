@@ -2,7 +2,7 @@ name: Auto-Publish
 on:
   push:
     branches:
-      - feat/respec
+      - main
   workflow_dispatch:
 
 jobs:
@@ -23,12 +23,8 @@ jobs:
       - name: Run Respec
         run:
           sudo npx puppeteer browsers install chrome
-          npx respec --src index.html --out index.html.build.html -t 1000 --disable-sandbox --verbose
+          npx respec --src index.html --out index.html.build.html -t 60 --disable-sandbox --verbose
 #      - uses: w3c/spec-prod@v2
-#        with:
-#          BUILD_FLAGS:
-#            - "-t 40"
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
