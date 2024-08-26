@@ -19,6 +19,7 @@ jobs:
           ./scripts/replace.sh
       - name: Run Respec
         run: |
+          sudo apt update
           sudo apt install nodejs
           sudo apt install npm
           sudo npx puppeteer browsers install chrome
