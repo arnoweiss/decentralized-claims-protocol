@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build and Validate
-    runs-on: node:22
+    runs-on: node:alpine
     permissions:
       contents: write
     steps:
@@ -20,8 +20,7 @@ jobs:
 #      - name: Run Respec
 #        run: |
 #          sudo npx puppeteer browsers install chrome
-#          sudo npm install respec
-#          re
+#          sudo npx respec --src index.html --out index.html.build.html
       - uses: w3c/spec-prod@v2
         with:
           BUILD_FLAGS: -t 40
