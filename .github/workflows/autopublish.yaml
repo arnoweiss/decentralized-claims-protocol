@@ -19,8 +19,9 @@ jobs:
           ./scripts/replace.sh
       - name: Run Respec
         run: |
-          sudo apt update
+          sudo apt update && sudo apt upgrade
           sudo apt install nodejs
+          node --version
           sudo apt install npm
           sudo npx puppeteer browsers install chrome
           sudo npx respec --src index.html --out index.html.build.html -t 60
