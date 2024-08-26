@@ -23,7 +23,7 @@ jobs:
       - name: Run Respec
         run: |
           sudo npx puppeteer browsers install chrome
-          npx respec --src index.html --out index.html.build.html -t 60
+          npx respec --src index.html --out index.html.build.html -t 60 --disable-sandbox --verbose
 #      - uses: w3c/spec-prod@v2
 #        with:
 #          BUILD_FLAGS:
