@@ -36,7 +36,24 @@ Decentralization is achieved in the following ways:
 Each participant MUST have a unique, immutable **_identity_** provided by the `Registration Service` and
 a [DID] [[did-core]] that it chooses. This relationship is expressed as:
 
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
 ```
+
+<figure>
+  <pre class="diagram mermaid">
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+  </pre>
+  <figcaption>A sequence diagram example</figcaption>
+</figure>
+
+```text
 ID  ------ Can resolve to -----> DID
  ^                                |
  |                                |
