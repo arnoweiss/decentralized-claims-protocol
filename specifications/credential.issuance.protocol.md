@@ -143,7 +143,7 @@ exact error code is implementation-specific.
 The following is a non-normative example of the [Credential Message](#credential-message) JSON body:
 
 <aside class="example" title="Credential Message">
-    <pre class="json" data-include="./resources/issuance/example/credential-message.json">
+    <pre class="json" data-include="./resources/0.8/issuance/example/credential-message.json">
     </pre>
 </aside>
 
