@@ -21,6 +21,7 @@ jobs:
       - name: Copy assets up a level
         run: |
           cp specifications/*.png .
+          cp specifications/*.svg .
           cp specifications/*.yaml .
           mkdir -p resources/v0.8
           cp -r artifacts/src/main/resources/* resources/v0.8

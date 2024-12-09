@@ -2,7 +2,7 @@
 
 This specification is based on the Issuer-Holder-Verifier model as described in the [[[vc-data-model]]]:
 
-![alt text 2](specifications/issuer-holder-verifier-model.svg "The Issuer-Holder-Verifier Model")
+![alt text 2](issuer-holder-verifier-model.svg "The Issuer-Holder-Verifier Model")
 
 In this model, the [=Issuer=] creates a [=Verifiable Credential=] and provides it to the [=Holder=], which can then
 present the [=Verifiable Credential=] to the [=Verifier=].
@@ -15,7 +15,7 @@ specification [[dsp-base]] and this specification.
 
 The Issuer-Holder-Verifier model is mapped to the following architecture in this specification:
 
-![alt text 2](specifications/participant-agent-model.svg "Information Flow Architecture")
+![alt text 2](participant-agent-model.svg "Information Flow Architecture")
 
 - Identity and claims information is exchanged between a [=Holder=] and a [=Verifier=] in the context of Dataspace
   Protocol message interactions [[dsp-base]]. These messages will contain metadata such as Offers and Agreements that
@@ -48,7 +48,7 @@ agrees to allow access to a protected resource. Since the Dataspace Protocol is 
 exchange patterns, presentation protocols that rely on end-user (i.e., human) consent are not applicable. The protocols
 defined in this specification establish consent in the following way:
 
-![alt text 3](specifications/consent-model.svg "Consent in the Decentralized Claims Protocol")
+![alt text 3](consent-model.svg "Consent in the Decentralized Claims Protocol")
 
 Consent is handled by first mapping Dataspace Protocol Offer and Agreement policies [[dsp-base]] to a set of
 required [=Verifiable Credentials=]. The exact mappings are dataspace-specific as policies
