@@ -14,10 +14,15 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setupb-node@v4
         with:
           node-version: 22.x
+      - run: | 
+          mkdir 0.8.1
+          cd 0.8.1
+      - uses: actions/checkout@v4
+        with:
+          ref: '0.8.1'
       - name: Copy assets up a level
         run: |
           cp specifications/*.png .
@@ -25,9 +30,6 @@ jobs:
           mkdir -p resources/v0.8
           cp -r artifacts/src/main/resources/* resources/v0.8
           rm -rf artifacts
-      - name: Run Respec
-        run:
-          npx respec --src index.html --out index.html.build.html -t 60 --disable-sandbox --verbose
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
