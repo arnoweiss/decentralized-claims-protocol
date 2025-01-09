@@ -12,7 +12,7 @@ do
   echo starting with tag $tag
   mkdir $tag
   cd $tag
-  git clone https://github.com/eclipse-dataspace-dcp/decentralized-claims-protocol.git --depth 1 --branch ${tag} --quiet
+  git clone https://github.com/arnoweiss/decentralized-claims-protocol.git --depth 1 --branch ${tag} --quiet
   pwd
   mv ./decentralized-claims-protocol/* .
   cd ..
